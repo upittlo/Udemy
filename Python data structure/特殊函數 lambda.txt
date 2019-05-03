@@ -1,0 +1,34 @@
+#### Lambda 函數
+
+- 又稱匿名函數
+- 不需要def, return 
+
+語法 >>  lambda 輸入: 回傳物件
+lambda 語法本身就是一個fucnction
+
+squared = lambda x:x**2
+
+用法
+squared(數字)
+
+
+#### 自訂函數
+
+- 常與內建兩個函數一起使用
+
+1. filter()
+2. map()
+
+(1)
+過濾出可被2整除的output
+list(filter(lambda x: x %2 ==0,range(1,11)))
+
+
+(2)
+
+list(map(lambda x: x**2,range(1,11)))
+
+
+
+
+

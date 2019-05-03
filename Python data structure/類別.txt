@@ -1,0 +1,92 @@
+#### 類別
+
+
+
+## 建立物件時,會先呼叫__new()__ 建立類別物件,並且在記憶體上配置空間
+## __init__(self) 為建構函數(建構子)，實體化物件時會呼叫它 (內涵建構時須入input)
+
+## 順序 __new()__ >> __init__(self)
+## init 在物件建立時自動呼叫
+## self 為自己這個物件
+
+範例1:
+
+class MyClass:
+    ### 範例屬性
+    i = 12345
+    
+print(MyClass.i)
+
+class Complex:
+    ### 實體建構
+    def __init__(self,realpart,imagpart):   ### 初始化
+        self.r = realpart
+        self.i = imagpart
+        
+x= Complex(3.0,-4.5)
+print(x.r,x.i)
+
+範例2: 成員屬性與成員方法
+
+class MyClass2:
+    i =12345
+    def f(self):
+        return "hello world"
+    
+x = MyClass2()
+print(x.i)
+print(x.f())
+
+
+#### __del__(self) 解構物件
+
+
+class Complex:
+    ### 實體建構
+    def __init__(self,realpart,imagpart):   ### 初始化
+        self.r = realpart
+        self.i = imagpart
+		
+	def __del__(self):
+	    print("解構")
+		
+		
+x = Complex(1,2)
+x = None  ## 解構物件
+
+
+
+#### 繼承
+
+語法:
+class 子類別(父類別):
+
+ex:
+calss Car(Vehicle):
+    def __init__(self,nane,engine,electric):
+	    super().__init__(name,engine)  ## 用super 呼叫父類別函數
+
+
+## private
+
+語法:
+__name : 為私有存取控制，只有該類別方法才能存取
+
+即使是子類別也不可使用private
+
+
+
+
+#### 多重繼承
+
+class 子類別(父類別1,父類別2,父類別3):
+若有相同名稱屬性與方法以最左邊的父類別為優先繼承
+
+
+
+
+		
+		
+
+
+

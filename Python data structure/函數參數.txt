@@ -1,0 +1,31 @@
+#### 函數參數
+
+*name 為tuple
+
+**name 為dict
+
+
+ex:
+
+def cheeseshop(kind,*arguments,**keywords):
+
+
+
+
+cheeseshop("abcdefg",'aa','bb','cc',x='1',y = '2',z = '3')
+           --kind--  --- argument--  ----- keywords  ----
+		   
+		   
+		   
+ex2:
+		   
+def concat(*arg,sep = '/'):
+    return sep.join(args)
+
+print(concat("earth","marth","venus"))
+
+
+ex3:
+
+def parrot(voltage,state='stay',action = 'fly'):
+    
